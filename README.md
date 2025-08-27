@@ -165,20 +165,19 @@ The overarching goals of the Ubuntu Harvest Foundation website are to:
  
 Web Wireframes
 
+<img width="1366" height="768" alt="Screenshot 2025-08-27 221433" src="https://github.com/user-attachments/assets/c88e9f6d-ad88-4024-b226-7e2993787690" />
  
+<img width="1366" height="768" alt="Screenshot 2025-08-27 221451" src="https://github.com/user-attachments/assets/4af7aecc-7ace-45af-a9c6-05e3c86776d4" />
 
+<img width="1366" height="768" alt="Screenshot 2025-08-27 221512" src="https://github.com/user-attachments/assets/6b11e581-d313-4cd5-8640-2b46b376854a" />
  
+<img width="1366" height="768" alt="Screenshot 2025-08-27 221534" src="https://github.com/user-attachments/assets/772da739-080c-4413-9886-012df961437b" />
  
+ <img width="1366" height="768" alt="Screenshot 2025-08-27 221924" src="https://github.com/user-attachments/assets/0544696f-4597-4aa3-a2ba-65b9f5521e67" />
+
+
  
-
- 
-
- 
- 
-
-
-
- 
 Declarations
 
- 
+<img width="739" height="701" alt="new" src="https://github.com/user-attachments/assets/ac64dfd6-0d67-4b85-a655-946fd0413e8a" />
+
