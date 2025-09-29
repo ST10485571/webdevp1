@@ -2,6 +2,8 @@ Sabelo Kagiso Gwele
 ST10485571
 KHF
 
+GitHub Link: https://github.com/ST10485571/webdevp1/tree/part-2
+
 The Kamvelihle Harvest Foundation: A Story of Hope and Resilience
 
 In the heart of South Africa, a paradox exists - abundance and scarcity living side by side. It was this stark contrast that sparked the creation of the Ubuntu Harvest Foundation (UHF) in late 2021. A group of dedicated community advocates and logistics professionals came together, driven by a shared sense of purpose. They witnessed firsthand the waste of edible food by retailers, while just a stone's throw away, thousands struggled with hunger and homelessness.
