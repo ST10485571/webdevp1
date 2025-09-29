@@ -3,6 +3,7 @@ ST10485571
 KHF
 
 GitHub Link: https://github.com/ST10485571/webdevp1/tree/part-2
+GitHub Link:  https://github.com/ST10485571/webdevp1/tree/master 
 
 The Kamvelihle Harvest Foundation: A Story of Hope and Resilience
 
