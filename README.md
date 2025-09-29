@@ -175,6 +175,25 @@ Web Wireframes
  
  <img width="1366" height="768" alt="Screenshot 2025-08-27 221924" src="https://github.com/user-attachments/assets/0544696f-4597-4aa3-a2ba-65b9f5521e67" />
 
+Reference 
+
+Nussbaum, B. (2003) ‘Ubuntu: Reflections of a South African on Our Common Humanity’, Reflections, 4(4), pp. 21–26.
+
+Statistics South Africa. (2022) Food Security and Hunger in South Africa. Pretoria: Stats SA. Available at: https://www.statssa.gov.za (Accessed: 29 September 2025).
+
+Shoprite Holdings Ltd. (2025) Corporate Social Responsibility. Available at: https://www.shopriteholdings.co.za (Accessed: 29 September 2025).
+
+Pick n Pay Stores Ltd. (2025) Sustainability and Community. Available at: https://www.pnp.co.za (Accessed: 29 September 2025).
+
+Woolworths Holdings Ltd. (2025) Good Business Journey. Available at: https://www.woolworths.co.za (Accessed: 29 September 2025).
+
+PEP Stores. (2025) Community Engagement. Available at: https://www.pepstores.com (Accessed: 29 September 2025).
+
+TimesLIVE. (2023) Siya Kolisi backs Kamvelihle Harvest Foundation’s food rescue mission. Available at: https://www.timeslive.co.za (Accessed: 29 September 2025).
+
+Mbatha, N. (2024) Ubuntu in Action: My Journey with Kamvelihle. Instagram. Available at: https://www.instagram.com/nomzamo_m (Accessed: 29 September 2025).
+
+Kolisi, S. (2024) Feeding Hope with Kamvelihle Harvest. LinkedIn. Available at: https://www.linkedin.com/in/siyakolisi (Accessed: 29 September 2025).
 
  
 Declarations
