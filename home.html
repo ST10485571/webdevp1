@@ -1,60 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kamvelihle Harvest Foundation - Nourishing Hope, Restoring Dignity</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts - Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamvelihle Harvest Foundation - Nourishing Hope, Restoring Dignity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background for the whole page */
+        }
+        /* Custom colors based on logo concept */
+        .bg-kamvelihle-orange { background-color: #FF8C00; } /* Darker orange */
+        .text-ubuntu-orange { color: #FF8C00; }
+        .bg-ubuntu-green { background-color: #4CAF50; } /* Medium green */
+        .text-ubuntu-green { color: #4CAF50; }
+        .bg-ubuntu-brown { background-color: #8B4513; } /* Saddle Brown */
+        .text-ubuntu-brown { color: #8B4513; }
+        .border-ubuntu-orange { border-color: #FF8C00; }
+        .border-ubuntu-green { border-color: #4CAF50; }
+        .border-kamvelihle-brown { border-color: #8B4513; }
+
+ </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ubuntu-green': '#4CAF50',
+                        'ubuntu-orange': '#FF8C00',
+                        'ubuntu-brown': '#8B4513',
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="font-inter bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md py-4">
-    <nav class="container mx-auto flex justify-between items-center px-4">
-      <!-- Logo and Name -->
-      <div class="flex items-center">
-        <img src="https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=UHF" alt="Ubuntu Harvest Foundation logo" class="h-12 w-12 rounded-full mr-3"/>
-        <a href="#" class="text-2xl font-bold text-green-600">Kamvelihle Harvest Foundation</a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="#about" class="text-lg text-gray-700 hover:text-orange-500 transition duration-300">About Us</a></li>
-        <li><a href="#programs" class="text-lg text-gray-700 hover:text-orange-500 transition duration-300">Our Programs</a></li>
-        <li><a href="#get-involved" class="text-lg text-gray-700 hover:text-orange-500 transition duration-300">Get Involved</a></li>
-        <li><a href="#partners" class="text-lg text-gray-700 hover:text-orange-500 transition duration-300">Partners</a></li>
-        <li><a href="#contact" class="text-lg text-gray-700 hover:text-orange-500 transition duration-300">Contact</a></li>
-      </ul>
-
-      <!-- Mobile Menu Button -->
-      <button class="md:hidden text-gray-700 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-20 px-4 text-center rounded-b-xl shadow-lg">
-    <div class="container mx-auto">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Nourishing Hope, Restoring Dignity.</h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-        At Kamvelihle Harvest Foundation, we bridge the gap between surplus and scarcity, transforming donated food and clothing into a lifeline for South Africa's most vulnerable.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-        <a href="#get-involved" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-          Get Involved
-        </a>
-        <a href="#get-involved" class="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-          Donate Now
-        </a>
-      </div>
+    <!-- Message Box HTML (hidden by default) -->
+    <div id="messageBox" class="hidden message-box">
+        <p id="messageText" class="text-lg font-semibold"></p>
+        <button onclick="hideMessageBox()">OK</button>
     </div>
-  </section>
 
-</body>
-</html>
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo and Name -->
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=UHF" alt="Ubuntu Harvest Foundation Logo" class="h-12 w-12 rounded-full mr-3">
+                <a href="#" class="text-2xl font-bold text-ubuntu-green">Kamvelihle Harvest Foundation</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">About Us</a></li>
+                <li><a href="#programs" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Our Programs</a></li>
+                <li><a href="#get-involved" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Get Involved</a></li>
+                <li><a href="#partners" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Partners</a></li>
+                <li><a href="#contact" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-inner">
+            <ul class="flex flex-col items-center space-y-3">
+                <li><a href="#about" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#programs" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Our Programs</a></li>
+                <li><a href="#get-involved" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Get Involved</a></li>
+                <li><a href="#partners" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Partners</a></li>
+                <li><a href="#contact" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-ubuntu-green to-green-600 text-white py-20 px-4 text-center rounded-b-xl shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Nourishing Hope, Restoring Dignity.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                At Kamvelihle Harvest Foundation, we bridge the gap between surplus and scarcity, transforming donated food and clothing into a lifeline for South Africa's most vulnerable.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#get-involved" class="bg-ubuntu-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Get Involved
+                </a>
+                <a href="#get-involved" class="bg-white text-ubuntu-green hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </section>
