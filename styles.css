@@ -1,0 +1,43 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #199423; /* Light background for the whole page */
+        }
+        /* Custom colors based on logo concept */
+        .bg-ubuntu-orange { background-color: #FF8C00; } /* Darker orange */
+        .text-ubuntu-orange { color: #FF8C00; }
+        .bg-ubuntu-green { background-color: #4CAF50; } /* Medium green */
+        .text-ubuntu-green { color: #4CAF50; }
+        .bg-ubuntu-brown { background-color: #8B4513; } /* Saddle Brown */
+        .text-ubuntu-brown { color: #8B4513; }
+        .border-ubuntu-orange { border-color: #FF8C00; }
+        .border-ubuntu-green { border-color: #4CAF50; }
+
+        /* Custom styles for message box */
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            z-index: 1000;
+            text-align: center;
+            max-width: 90%;
+            border: 2px solid #4CAF50; /* Green border */
+        }
+        .message-box button {
+            background-color: #FF8C00; /* Orange button */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .message-box button:hover {
+            background-color: #E67E22; /* Slightly darker orange on hover */
+        }
+    

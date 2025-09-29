@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamvelihle Harvest Foundation - Nourishing Hope, Restoring Dignity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Message Box HTML (hidden by default) -->
+    <div id="messageBox" class="hidden message-box">
+        <p id="messageText" class="text-lg font-semibold"></p>
+        <button onclick="hideMessageBox()">OK</button>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo and Name -->
+            <div class="flex items-center">
+                <img src="" alt="Kamvelihle Harvest Foundation Logo" class="h-12 w-12 rounded-full mr-3">
+                <a href="#" class="text-2xl font-bold text-ubuntu-green">Kamvelihle Harvest Foundation</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">About Us</a></li>
+                <li><a href="#programs" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Our Programs</a></li>
+                <li><a href="#get-involved" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Get Involved</a></li>
+                <li><a href="#partners" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Partners</a></li>
+                <li><a href="#contact" class="text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-inner">
+            <ul class="flex flex-col items-center space-y-3">
+                <li><a href="#about" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#programs" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Our Programs</a></li>
+                <li><a href="#get-involved" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Get Involved</a></li>
+                <li><a href="#partners" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Partners</a></li>
+                <li><a href="#contact" class="block py-2 text-lg text-gray-700 hover:text-ubuntu-orange transition duration-300" onclick="toggleMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-ubuntu-green to-green-600 text-white py-20 px-4 text-center rounded-b-xl shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Nourishing Hope, Restoring Dignity.</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                At Kamvelihle Harvest Foundation, we bridge the gap between surplus and scarcity, transforming donated food and clothing into a lifeline for South Africa's most vulnerable.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#get-involved" class="bg-ubuntu-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Get Involved
+                </a>
+                <a href="#get-involved" class="bg-white text-ubuntu-green hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-ubuntu-green mb-12">About Kamvelihle Harvest Foundation</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2">
+                    <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Our+Story" alt="About Us Image" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+                <div class="md:order-1">
+                    <h3 class="text-3xl font-semibold text-ubuntu-brown mb-4">Our Mission & Vision</h3>
+                    <p class="text-lg mb-6">
+                        The Kamvelihle Harvest Foundation is dedicated to combating food and clothing insecurity amoung South Africa's homeless and vulnerable populations by efficiently collecting and distributing quality donated surplus from local and global partners; fostering community; and restoring dignity through the spirit of Ubuntu.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Our vision is a South Africa where no person experiences the indignity of hunger or the hardship of inadequate clothing, and where communities flourish through shared resources and compassionate action.
+                    </p>
+                    <h3 class="text-3xl font-semibold text-ubuntu-brown mb-4">Our Brief History</h3>
+                    <p class="text-lg mb-6">
+                        The Kamvelihle Harvest Foundation (KHF) was born in late 2022 from the stark reality of food waste amidst widespread hunger in South Africa. What started as a small, volunteer-driven effort in Johannesburg quickly grew, fueled by the spirit of Ubuntu. By mid-2023, KHF formalized as an NPC and secured PBO status, attracting partnerships with major supermarkets like Shoprite and Pick n Pay. The past year has seen accelerated growth, with collaborations extending to retail brands like PEP Stores and Woolworths for clothing, and crucial endorsements from South African celebrities such as Nomzamo Mbatha and Siya Kolisi. This support, combined with significant investment from philanthropists and corporate foundations, has enabled us to expand our reach, establishing key "Harvest Hubs" in major urban centers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Programs Section -->
+    <section id="programs" class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-ubuntu-green mb-12">Our Programs in Action</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Food Rescue Program -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-ubuntu-orange transform transition duration-300 hover:scale-105">
+                    <h3 class="text-3xl font-semibold text-ubuntu-orange mb-4">Harvest Hubs: Food Rescue Program</h3>
+                    <p class="text-lg mb-4">
+                        Our "Harvest Hubs" are the heart of our food rescue efforts. We partner with local and global supermarket chains to collect surplus, near-expiry, or aesthetically imperfect yet perfectly edible food items. This includes fresh produce, baked goods, and packaged foods that would otherwise go to waste.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Our dedicated teams ensure safe collection, rigorous quality checks, and careful sorting. The food is then packaged into nutritious meal kits or bulk supplies, ready for distribution to those in need. This program not only feeds hungry individuals but also significantly reduces food waste in South Africa.
+                    </p>
+                    <img src="https://placehold.co/500x300/FF8C00/FFFFFF?text=Food+Rescue" alt="Food Rescue Image" class="rounded-lg mt-6 w-full h-auto">
+                </div>
+
+                <!-- Clothing & Essentials Drive -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-ubuntu-green transform transition duration-300 hover:scale-105">
+                    <h3 class="text-3xl font-semibold text-ubuntu-green mb-4">Dignity Threads: Clothing & Essentials</h3>
+                    <p class="text-lg mb-4">
+                        Through our "Dignity Threads" initiative, we provide essential clothing and hygiene items to the homeless. We collaborate with leading local retail brands to receive donations of unsold stock, factory seconds, or returned items.
+                    </p>
+                    <p class="text-lg mb-4">
+                        These items are meticulously sorted, cleaned, and prepared into "Dignity Packs" – offering a complete outfit, socks, underwear, and basic hygiene products. This program ensures that individuals not only receive necessary items but also experience the dignity that comes with appropriate and clean attire.
+                    </p>
+                    <img src="https://placehold.co/500x300/4CAF50/FFFFFF?text=Clothing+Drive" alt="Clothing Drive Image" class="rounded-lg mt-6 w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-ubuntu-brown mb-12">Get Involved: Make a Difference</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Volunteer Section -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-l-4 border-ubuntu-orange">
+                    <h3 class="text-3xl font-semibold text-ubuntu-orange mb-4">Volunteer with Us</h3>
+                    <p class="text-lg mb-6">
+                        Our volunteers are the backbone of Kamvelihle Harvest Foundation. Whether you love to cook, organize, or directly engage with communities; your time and skills can make a profound impact. We need help with:
+                    </p>
+                    <ul class="list-disc list-inside text-lg mb-6 space-y-2">
+                        <li>Preparing and packaging nutritious meals in our Harvest Hubs.</li>
+                        <li>Sorting and organizing donated clothing and essentials.</li>
+                        <li>Distributing food and clothing directly to communities in need.</li>
+                        <li>Logistical support and administrative tasks.</li>
+                    </ul>
+                    <p class="text-lg mb-6 font-semibold">Ready to lend a hand? Fill out the form below to express your interest!</p>
+
+                    <form id="volunteerForm" class="space-y-4">
+                        <div>
+                            <label for="volunteerName" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="volunteerName" name="volunteerName" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-ubuntu-green" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="volunteerEmail" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="volunteerEmail" name="volunteerEmail" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-ubuntu-green" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div>
+                            <label for="volunteerPhone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number (Optional):</label>
+                            <input type="tel" id="volunteerPhone" name="volunteerPhone" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-ubuntu-green" placeholder="+27 12 345 6789">
+                        </div>
+                        <div>
+                            <label for="preferredRole" class="block text-gray-700 text-sm font-bold mb-2">Preferred Role:</label>
+                            <select id="preferredRole" name="preferredRole" class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-ubuntu-green" required>
+                                <option value="">Select a role</option>
+                                <option value="cooking">Help with Cooking/Meal Prep</option>
+                                <option value="distribution">Food/Clothing Distribution</option>
+                                <option value="sorting">Sorting & Organizing Donations</option>
+                                <option value="admin">Administrative Support</option>
+                                <option value="other">Other (please specify in message)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="volunteerMessage" class="block text-gray-700 text-sm font-bold mb-2">Your Message:</label>
+                            <textarea id="volunteerMessage" name="volunteerMessage" rows="4" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-ubuntu-green" placeholder="Tell us a bit about yourself and why you'd like to volunteer."></textarea>
+                        </div>
+                        <button type="submit" class="bg-ubuntu-green hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full">
+                            Submit Volunteer Application
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Donate Section -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border-l-4 border-ubuntu-green">
+                    <h3 class="text-3xl font-semibold text-ubuntu-green mb-4">Donate & Support Our Cause</h3>
+                    <p class="text-lg mb-6">
+                        Your generosity fuels our mission. Every contribution, big or small, directly impacts the lives of those we serve.
+                    </p>
+
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3">Monetary Donations:</h4>
+                    <p class="text-lg mb-4">
+                        Financial contributions allow us the flexibility to purchase essential items, cover operational costs, and expand our reach. As a registered Public Benefit Organisation (PBO); all monetary donations to Kamvelihle Harvest Foundation are tax-deductible in South Africa (Section 18A certificates available upon request).
+                    </p>
+                    <button onclick="showMessageBox('Thank you for your interest in donating! For this assignment, please imagine a secure payment gateway here. Your support is invaluable!')" class="bg-ubuntu-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 w-full mb-8">
+                        Donate Funds Now
+                    </button>
+
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3">Food & Clothing Donations:</h4>
+                    <p class="text-lg mb-4">
+                        We gratefully accept donations of non-perishable food items, fresh produce (from commercial partners), and new or gently used clothing and blankets.
+                    </p>
+                    <p class="text-lg mb-4 font-semibold">How to Donate In-Kind:</p>
+                    <ul class="list-disc list-inside text-lg mb-6 space-y-2">
+                        <li>**Drop-off at Harvest Hubs:** Visit our main Harvest Hubs in Johannesburg, Cape Town, or Durban during operating hours (details in Contact section).</li>
+                        <li>**Partner Retail Stores:** Look for designated Ubuntu Harvest Foundation collection bins at participating Shoprite, Pick n Pay, PEP Stores, and Woolworths branches nationwide.</li>
+                        <li>**Organize a Drive:** Contact us if you'd like to organize a large-scale food or clothing drive in your community or workplace.</li>
+                    </ul>
+                    <p class="text-lg mb-4">
+                        *Please ensure all clothing donations are clean and in good condition. For food, we prioritize non-perishable items, but commercial partners can donate surplus fresh produce directly.*
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-16 px-4 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-ubuntu-green mb-12">Our Valued Partners</h2>
+            <p class="text-xl text-center text-gray-700 mb-10 max-w-4xl mx-auto">
+                The Kamvelihle Harvest Foundation thrives on the incredible support of our partners who share our commitment to a better South Africa.
+            </p>
+
+            <h3 class="text-3xl font-semibold text-ubuntu-brown mb-8 text-center">Supermarket & Food Partners</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/FF8C00/FFFFFF?text=Shoprite+Logo" alt="Shoprite Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/4CAF50/FFFFFF?text=PnP+Logo" alt="Pick n Pay Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/8B4513/FFFFFF?text=Woolworths+Food+Logo" alt="Woolworths Food Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/FF8C00/FFFFFF?text=SPAR+Logo" alt="SPAR Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/4CAF50/FFFFFF?text=Global+Foods+Inc.+Logo" alt="Fictional Global Foods Inc. Logo" class="max-h-full max-w-full object-contain">
+                </div>
+            </div>
+
+            <h3 class="text-3xl font-semibold text-ubuntu-brown mb-8 text-center">Retail & Brand Partners</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/4CAF50/FFFFFF?text=PEP+Logo" alt="PEP Stores Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/FF8C00/FFFFFF?text=Woolworths+Fashion+Logo" alt="Woolworths Fashion Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/8B4513/FFFFFF?text=Mr+Price+Logo" alt="Mr Price Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/4CAF50/FFFFFF?text=Ackermans+Logo" alt="Ackermans Logo" class="max-h-full max-w-full object-contain">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-center justify-center h-32">
+                    <img src="https://placehold.co/150x80/FF8C00/FFFFFF?text=Clicks+Logo" alt="Clicks Logo (for hygiene items)" class="max-h-full max-w-full object-contain">
+                </div>
+            </div>
+
+            <h3 class="text-3xl font-semibold text-ubuntu-brown mb-8 text-center">Our Celebrity Champions</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <img src="https://placehold.co/120x120/8B4513/FFFFFF?text=Nomzamo" alt="Nomzamo Mbatha" class="rounded-full w-24 h-24 mx-auto mb-4 object-cover">
+                    <p class="text-xl font-semibold text-gray-800">Nomzamo Mbatha</p>
+                    <p class="text-md text-gray-600">Humanitarian & Actress</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <img src="https://placehold.co/120x120/4CAF50/FFFFFF?text=Siya" alt="Siya Kolisi" class="rounded-full w-24 h-24 mx-auto mb-4 object-cover">
+                    <p class="text-xl font-semibold text-gray-800">Siya Kolisi</p>
+                    <p class="text-md text-gray-600">Rugby Captain & Philanthropist</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <img src="https://placehold.co/120x120/FF8C00/FFFFFF?text=Bonang" alt="Bonang Matheba" class="rounded-full w-24 h-24 mx-auto mb-4 object-cover">
+                    <p class="text-xl font-semibold text-gray-800">Bonang Matheba</p>
+                    <p class="text-md text-gray-600">Media Personality & Entrepreneur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-ubuntu-green mb-12">Contact Us</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Have questions; want to partner; or just say hello? We'd love to hear from you!
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border-t-4 border-ubuntu-orange">
+                    <h3 class="text-2xl font-semibold text-ubuntu-orange mb-3">Head Office</h3>
+                    <p class="text-lg">14 Ubuntu Way, Dignity Gardens,</p>
+                    <p class="text-lg">Sandton, Gauteng, 2196</p>
+                    <p class="text-lg">South Africa</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border-t-4 border-ubuntu-green">
+                    <h3 class="text-2xl font-semibold text-ubuntu-green mb-3">Email Us</h3>
+                    <p class="text-lg">kamvelihleharvest@gmail.com</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md border-t-4 border-ubuntu-brown">
+                    <h3 class="text-2xl font-semibold text-ubuntu-brown mb-3">Call Us</h3>
+                    <p class="text-lg">+27 11 555 1234 (General Enquiries)</p>
+                    <p class="text-lg">+27 11 555 5678 (Partnerships)</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="text-3xl font-semibold text-ubuntu-brown mb-6">Our Harvest Hub Locations:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <p class="text-xl font-semibold mb-2">Johannesburg Hub</p>
+                        <p>Unit 7, Harvest Park, Foodbank Ave, City Deep, JHB</p>
+                        <p>Open: Mon-Fri, 9 AM - 4 PM</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <p class="text-xl font-semibold mb-2">Cape Town Hub</p>
+                        <p>Warehouse 12, Ocean View Ind. Park, Epping, CPT</p>
+                        <p>Open: Tue-Sat, 10 AM - 3 PM</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                        <p class="text-xl font-semibold mb-2">Durban Hub</p>
+                        <p>Bayview Logistics, Port Access Rd, Mobeni, DBN</p>
+                        <p>Open: Mon-Fri, 8:30 AM - 3:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ubuntu-brown text-white py-8 px-4 rounded-t-xl shadow-inner">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg">&copy; 2025 Kamvelihle Harvest Foundation. All rights reserved.</p>
+                    <p class="text-sm">Registered Non-Profit Company (NPC) & Public Benefit Organisation (PBO).</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-ubuntu-orange transition duration-300">Facebook</a>
+                    <a href="https://www.youtube.com/@KAMVELIHLEHARVESTFOUNDATION" class="text-white hover:text-ubuntu-orange transition duration-300">YouTube</a>
+                    <a href="https://www.instagram.com/kamvelihleharvest.foundation?igsh=MTN2Z3BjYzF1bTdmZg%3D%3D&utm_source=qr" class="text-white hover:text-ubuntu-orange transition duration-300">Instagram</a>
+                    <a href="#" class="text-white hover:text-ubuntu-orange transition duration-300">LinkedIn</a>
+                </div>
+            </div>
+            <p class="text-sm">
+                "I am because we are." - The spirit of Ubuntu guides our every action.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // Message box functions (instead of alert/confirm)
+        const messageBox = document.getElementById('messageBox');
+        const messageText = document.getElementById('messageText');
+
+        function showMessageBox(message) {
+            messageText.textContent = message;
+            messageBox.classList.remove('hidden');
+        }
+
+        function hideMessageBox() {
+            messageBox.classList.add('hidden');
+        }
+
+        // Handle volunteer form submission
+        document.getElementById('volunteerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('volunteerName').value;
+            const email = document.getElementById('volunteerEmail').value;
+            const role = document.getElementById('preferredRole').value;
+
+            // In a real application, you would send this data to a server
+            // For this assignment, we'll just show a confirmation message
+            showMessageBox(`Thank you, ${name}! Your interest in volunteering for ${role} has been received. We'll contact you at ${email} soon.`);
+
+            // Optionally clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
